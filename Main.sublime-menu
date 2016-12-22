@@ -1,0 +1,110 @@
+// This file is part of XDEBUG Toolbar for Sublime Text - https://www.sublimetext.com/
+//
+// Adds a toolbar of useful icons in Sublime Text's menu for use with XDEBUG for PHP.
+//
+// Copyright © 2016 TNG Consulting Inc. - www.tngconsulting.ca
+// License: http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+// Author: Michael Milette
+//
+// For more information, see README.md.
+[
+    {
+        "id": "help"
+    },
+    {
+        "id": "folders", "caption": "-"
+    },
+    {
+        "caption": "[  xdebug",
+        "mnemonic": "x",
+        "children":
+        [
+            {
+                "caption": "☑ Start session in web browser",
+                "command": "xdebug_session_start", "args": {"launch_browser": true},
+            },
+            {
+                "caption": "✔ Start session",
+                "command": "xdebug_session_start",
+            },
+            {
+                "caption": "♋ Restart session",
+                "command": "xdebug_session_restart",
+            },
+            {
+                "caption": "✖ Close session",
+                "command": "xdebug_session_stop", "args": {"close_windows" : true},
+            },
+            {
+                "caption": "≠ Detach session",
+                "command": "xdebug_continue", "args": {"command" : "detach"},
+            },
+            {
+                "caption": "-",
+            },
+            {
+                "caption": "🔧 Set conditional breakpoint",
+                "command": "xdebug_conditional_breakpoint",
+            },
+            {
+                "caption": "○ Clear breakpoint",
+                "command": "xdebug_clear_breakpoints"
+            },
+            {
+                "caption": "☼ Clear all breakpoints",
+                "command": "xdebug_clear_all_breakpoints"
+            },
+            {
+                "caption": "-",
+            },
+            {
+                "caption": "Set Watch Expression",
+                "command": "xdebug_watch"
+            },
+            {
+                "caption": "Edit Watch Expression",
+                "command": "xdebug_watch", "args": {"edit" : true}
+            },
+            {
+                "caption": "Remove Watch Expression",
+                "command": "xdebug_watch", "args": {"remove" : true}
+            },
+            {
+                "caption": "Clear Watch Expressions",
+                "command": "xdebug_watch", "args": {"clear" : true}
+            },
+        ]
+    },
+    {
+        "caption": "⬤",
+        "command": "xdebug_breakpoint"
+    },
+    {
+        "caption": "{➺}",
+        "command": "xdebug_continue", "args": {"command" : "step_over"}
+    },
+    {
+        "caption": "{⤵}",
+        "command": "xdebug_continue", "args": {"command" : "step_into"}
+    },
+    {
+        "caption": "{⤴}",
+        "command": "xdebug_continue", "args": {"command" : "step_out"}
+    },
+    {
+        "caption": "▶|",
+        "command": "xdebug_run_to_line"
+    },
+    {
+        "caption": "▶",
+        "command": "xdebug_continue", "args": {"command" : "run"}
+    },
+    {
+        "caption": "■",
+        "command": "xdebug_continue", "args": {"command" : "stop"}
+    },
+    {
+        "caption": "]",
+        "command": "xdebug_session_stop", "args": {"close_windows" : true}
+    },
+]
